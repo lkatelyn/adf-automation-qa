@@ -10,10 +10,11 @@ exports.config = {
 
   onPrepare: () => {
       // set browser size...
-      browser.manage().window().setSize(1024, 800);
+      //browser.manage().window().setSize(1024, 800);
+      browser.manage().window().maximize();
 
       // better jasmine 2 reports...
-      const SpecReporter = require('jasmine-spec-reporter');
+      const SpecReporter = require('jasmine-spec-reporter').SpecReporter;
       jasmine.getEnv().addReporter(new SpecReporter({displayStacktrace: 'specs'}));
   },
 
@@ -43,6 +44,6 @@ exports.config = {
       displaySpecDuration: true,
       // overrides jasmine's print method to report dot syntax for custom reports
       print: () => {},
-      defaultTimeoutInterval: 50000
+      defaultTimeoutInterval: 100000
   }
 };
