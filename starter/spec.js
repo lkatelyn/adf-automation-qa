@@ -19,7 +19,7 @@ describe('ADF Demo App', function () {
     
     HomePage.NavigateToFilesPage(data.Files_Page_Url);
 
-    // //Files Page: Create a New file
+    //Files Page: Create a New file
     FilesPage.ClickCreateNewFolderButton();
     FilesPage.EnterNewFolderName(data.Folder_Name);
     FilesPage.ClickCreateButton();
